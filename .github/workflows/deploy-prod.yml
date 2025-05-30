@@ -31,4 +31,4 @@ jobs:
           aws s3 cp ./dist s3://prod-practice-githubflow/ --recursive
 
       - name: Cloudfront 캐시 무효화
-        run: aws cloudfront create-invalidation --distibution-id E1M9JQN4P8XX8P --path "/*"
+        run: aws cloudfront create-invalidation --distribution-id E1M9JQN4P8XX8P --path "/*"
