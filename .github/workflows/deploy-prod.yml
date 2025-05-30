@@ -28,7 +28,7 @@ jobs:
       - name: S3 기존 파일들 삭제 후 새로 업로드
         run: |
           aws s3 rm --recursive s3://prod-practice-githubflow
-          aws s3 cp ./dist s3://prod-practice-githubflow/ --revursive
+          aws s3 cp ./dist s3://prod-practice-githubflow/ --recursive
 
       - name: Cloudfront 캐시 무효화
         run: aws cloudfront create-invalidation --distibution-id E1M9JQN4P8XX8P --path "/*"
